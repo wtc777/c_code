@@ -1,0 +1,6 @@
+5
+0 apple 12.30
+1 apple 12.30
+2 pear 18.00
+3 banna 12.40
+4 xigua 15.60

@@ -48,19 +48,21 @@ void insert_sort(int* ary, int len)
 //快速排序
 void quick_sort(int* ary, int start, int end)
 {
-	if(start >= end) return;
-	int key = ary[start];
+	if(start >= end) return;//递归结束条件
+	//选取基准值
+	int key = ary[start];//第一个元素作为基准值
+	//设置下标start end
 	int i = start;
 	int j =end;
-	
+	//排序
 	while(i < j){
-	while(ary[i] = ary[j]) j--;
-	ary[i] = ary[j];
+	while(ary[i] >= ary[j]) j--;
+	ary[i] = ary[j];//将j位置上的值赋值给i的位置上
 	
 	while(ary[i] <=key && i < j) i++;
 	ary[j] = ary[i];
 	}
-	ary[i] = key;
+	ary[i] = key;//将key值赋值到重合的位置上
 	//左半部分和右半部分排序,递归调用
 	quick_sort(ary, start, i - 1);
 	quick_sort(ary, i + 1, end);
